@@ -1,0 +1,37 @@
+"""
+    sum_list.py: sum two linked lists
+"""
+from LinkedList import LinkedList
+def sum_lists(ll1, ll2): 
+    if ll1 is None: return ll2
+    if ll2 is None: return ll1
+
+    p1, p2 = ll1.head, ll2.head
+    carry = 0
+    res = LinkedList() 
+    while p1 or p2:
+        result = carry
+        if p1: 
+            result += p1.value
+            p1 = p1.next
+        if p2: 
+            result += p2.value
+            p2 = p2.next
+
+        res.add(result % 10)
+        carry = result // 10
+
+    if carry: res.add(carry)
+
+    return res
+        
+
+
+ll_a = LinkedList()
+ll_a.generate(4, 0, 9)
+ll_b = LinkedList()
+ll_b.generate(3, 0, 9)
+print(ll_a)
+print(ll_b)
+print(sum_lists(ll_a, ll_b))
+#print(sum_lists_followup(ll_a, ll_b))

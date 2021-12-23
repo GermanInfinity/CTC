@@ -1,0 +1,36 @@
+"""
+	palindrome.py: check if an LL is a palindrome
+"""
+from LinkedList import LinkedList
+def is_palindrome(ll): 
+	if ll.head == None: return True
+
+	p1 = ll.head
+	p2 = ll.head
+
+	while p2 and p2.next: 
+		p1 = p1.next
+		p2 = p2.next.next
+
+	# Reverse
+	prev, curr, nex = None, None, None
+	curr = p1
+	while curr: 
+		nex = curr.next
+		curr.next = prev
+		prev = curr
+		curr = nex
+
+	check = ll.head
+	# Compare
+	while check != prev: 
+		if check.value != prev.value: return False
+		check = check.next
+		prev = prev.next
+	return True
+
+
+ll_true = LinkedList([1, 2, 3, 4, 5, 4, 3, 2, 1])
+print(is_palindrome(ll_true))
+ll_false = LinkedList([1, 2, 3, 4, 5, 6, 7, 8, 9])
+print(is_palindrome(ll_false))
