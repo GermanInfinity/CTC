@@ -1,0 +1,28 @@
+GREEDY ALGORITHM
+An approach for solving a problem by selecting the best option available at the moment.
+works in a top-down approach, can be used in problems with these properties: 
+greedy choice, can solve problem with present solution without considering best choice
+optimal substructure, if optimal overall solution corresponds to optimal solution
+to subproblems
+advantages: easier to describe, may perform better than others in some cases
+disadvantages: does not always give optimal solution
+algorithm: start with empty set, consider possible solution till solution is found,
+once item is unfeasible do not consider again 
+
+
+DYNAMIC PROGRAMMING
+Dynamic Programming is a technique in computer programming that helps to efficiently solve a class of problems that have overlapping subproblems and optimal substructure property.
+Overlapping subproblems: solutions to subproblems depend on other subproblems
+Optimal substrucutre: optimal solution reached from optimal solutions to subproblems
+We can store solutions to other subproblems in memry, to avoid recomputation
+
+DP typically applied to recursive solutions, but not all recursive algorithms use
+DP, unless there are overlapping subproblems
+
+
+BACKTRACKING
+Problem solving algorithm that uses a brute force approach for finding the desired
+output. Approach tries out all possible solutions and chooses the best solution. The
+term backtracking, suggests if the current solution is not suitable, then backtrack
+and try other solutions, does not guarantee optimal solution. 
+Can be represented with a state space tree. 

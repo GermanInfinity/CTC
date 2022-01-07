@@ -1,0 +1,79 @@
+# ALGOEXPERT - ARRAYS
+# Monotonic arrays
+# always check ahead maintain increasing or decreasing property through array 
+
+# Two number sum
+# can sort and use two pointers
+# can use dictionary 
+
+# Validate subsequence 
+# check for matches in sequence and shorten sequence as you go along 
+
+# non constructible change
+# accumulate the change you can make with coins
+# but if a coin you're at is greater than change + 1, return chaneg + 1
+# sort coins, change is 0 
+# for each coin, if coin > change + 1 return change + 1, 
+# else update change
+
+# 3sum
+# loop till len - 2
+# perform 2 sum on remaining part of array 
+# in 2sum
+# use two pointer technique and update left and right
+# when you find match, update left and right pointer to avoid duplicates
+
+# smallest difference 
+# between two arrays, find pair with abs value closest to zero 
+# sort both arrays and use two pointers 
+# store differences in dictionary
+# update pointer1 if array[ptr1] is smaller than array[ptr2]
+# same for pointer 2 
+
+# longest peak 
+# use while loop to find peak, start i = 1
+# is peak is array[i] > array[i-1] and array[i] > array[i + 1]
+# if not continue
+# leftidx = i - 2, rightidx = i + 2
+# open up peaks: while leftidx >= 0 and array[left] < array[left + 1], left -= 1
+# while rightidx < len(array) and array[right] < array[right - 1], right += 1
+# curentPeak = rightidx - leftidx - 1
+# max peak = max(current, longest)
+# i = rightidx
+
+# first duplicate value 
+# use a set
+# as you insert, if element in set; return element
+# else add
+
+
+# merge overlapping intervals 
+# sort intervals
+# from second interval; check if we are going to skip interval completely 
+# or if there is an overlap 
+# or if there is no overlap 
+
+
+# to move
+# use two while loops
+# one for whole array and another to find elements at the end to swap with 
+# swap
+3sum
+sort array
+for i in array - 2: 
+    if i == 0 or nums[i] != nums[i - 1]: 
+        ans.append(2sum(array, array[i], 0-array[i], i+1, len(array)-1))
+2sum - array, current, target, low, high
+res = []
+while low < high: 
+    if array[low] + array[high] == target: 
+        res.append(current, array[low], array[high])
+        while left < high and array[left] == array[left + 1]: left += 1 
+        while left < right and array[right] == array[right - 1]: right -= 1
+        left += 1
+        right -= 1
+    elif array[low] + array[high] > target:
+        right -= 1
+    elif array[low] + array[high] < target:
+        left += 1
+return res

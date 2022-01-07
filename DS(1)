@@ -1,0 +1,32 @@
+STACK
+Last - In - First - Out 
+stack of plates; operations: push, pop, peek, isFull, isEmpty
+
+Complexities: 
+push: O(1)
+pop: O(1)
+
+
+Applications: reverse a word 
+              compiler calculation 2 * 3 in prefix or postfix form
+              browser navigation
+
+
+QUEUE
+First - In - First - Out
+line at grocery; operations: enqueue, dequeue, peek, isEmpty, isFull
+Complexities: 
+enqueue: O(1)
+dequeue: O(1), can be O(n) depending on where front is
+
+Applications: CPU scheduling, 
+              Can be use dofr synchronization in asynchronous processes
+              Call center to hold people in order
+
+Types: Circular, priority
+Priority queue: each elemenet has value associated with priority, elements can be
+removed from front of based on their priority. Implemnented with heap
+
+DEQUEUE
+doubly insert or removal queue; operations can happen at front or end of queue
+all operations are in O(1) time.

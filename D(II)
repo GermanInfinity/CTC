@@ -1,0 +1,39 @@
+LINKED LISTS
+Series of connected nodes, each node stores data and address of next node
+Power comes from restructuring chains
+
+Complexity 
+Search: O(n) worst O(n) average
+Insert: O(1) worst O(1) average
+Delection: O(1) worst O(1) average
+
+
+Applications: Dynamic memory allocation, implemneted in stack and queue, 
+              hash tables, graphs, in undo functionality of softwares
+Types: singly, doubly, circular
+
+Operations: Traversal, Sorting can be done -- ensure to use swaps between nodes, Insertion,deletion, search, sort
+
+
+HASH TABLE
+data structure stores elements in key-value pairs
+a new index is generated for a key, they keys are unique to each other 
+hash-collisions can be resolved: chaining with a double linked list
+                                 good hash function and open addressing
+
+Applications: great for constant time look up and insertion requirements
+              cryptographic applications
+              indexing data is required
+
+
+HEAP DATA STRUCTURE 
+A complete binary tree where each node is greater or smaller than it's child
+(max or min heap)
+
+Heapify: create heap structure from binary tree (array)
+Insert: at end of tree
+Remove: select node, swap with last element. remove, heapify
+Peek
+Extract max/min: replace with last element, heapify 
+
+Used to implement priority queue, dijkstra's algorithm, and heap sort

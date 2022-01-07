@@ -1,0 +1,50 @@
+what is an algorithm
+In computer programming terms, an algorithm is a set of well-defined instructions
+to solve a particular problem. 
+qualities: clear, unambigious, input and output properly defined,
+           effective among many different ways to solve, no computer 
+           code
+
+
+What are data structures
+Data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.
+Linear data structure (arranged in straight line): stack, queue, array, linked lists
+
+Non-linear structure (arranged in hierachy, one element to many): 
+divided into graph and trees
+both have vertices and edges, but graphs may have multiple edges between vertices.
+trees only have one edge between vertices/nodes. 
+
+differences: 
+memory: non-linear strucutre utilize memory depending on need
+        linear structure not efficient use of memory 
+time complexity: non-linear structure time-complexity remains the same
+                 lincear structure increases with data size
+layers and runs: different layers, multiple runs to see all elements
+                 single layer, one single run to see all elements
+
+
+Efficiency of algorithm 
+Depends on time, storage and other resource required to execute algorithm 
+Asypmtotic analysis- study of change in perfromance of an algorithm 
+Neither sorted or reverse array takes average time
+Big oh - worst case performance
+Omega  - best case performance
+Theta - average case performance 
+
+Divide and conquer algorithm 
+strategy for solving large problem by; breaking problem into smaller sub-problems,
+solving the sub problem and combining solutions for desired output
+recursion required to use. 
+
+Divide - Conquer (solve) - Combine
+
+diff to DP: does not store solutions to sub-problems
+            use when same subproblem not solved multiple times
+
+advantages: time complextiy of 2 matrix mult N**3, with divide conquer N**2.8
+            simplifies tower of hanoi problem 
+            efficient use of memory cache 
+
+
+

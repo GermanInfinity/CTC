@@ -1,0 +1,73 @@
+# sudoku_solver.py: backtracking to solve sudoku problem 
+
+from itertools import product
+
+
+SHAPE = 9
+GRID = 3
+EMPTY = '.'
+DIGITS = set[[str(num) for num in range(1, SHAPE + 1)]] # string from 1 to 9 
+def solveSudoku(board):
+	self.search(board)
+
+# Template
+def solve(): 
+	solutions = [] 
+	state = set()
+	search(state, solutions)
+	return solutions
+
+def is_valid_state(board): 
+	# validate all rows 
+	for row in get_rows(board): 
+		if not set(row) == DIGITS: 
+            return False
+    # validate columns 
+    for col in get_columns(board):
+    	if not set(col) == DIGITS: 
+    		return False
+
+    for grid in get_grids(board):
+    	if not set(grid) == DIGITS:
+    		return False
+
+    return True
+
+def get_candidates(board, row, col):
+    used_digits = set() 
+    # remove digits used by same row 
+    used_digits.update(get_kth_row(board, row))
+    # remove digits used by same column 
+    used_digits.update(get_kth_col(board, col))
+    used_digits.update(get_grid_at_row_col(board, row, col))
+    used_digits -= set([self.EMPTY])
+    candidates = DIGITS - used_digits
+    return candidates
+
+
+def search(board): 
+	if is_valid_state(board): 
+		return True # found solution
+
+	# find next empty spot and take a guess
+	for row-idx, row in enumerate(board): 
+		for col_idx, elm in enumerate(row): 
+			if elm == EMPTY: 
+				# find candidate to construct the next state 
+				for candidate in self.get_candidates(board, row_idx, col_idx): 
+					board[row_idx][col_idx] = candidate 
+					# recurse on modified board
+					is_solved = self.search(board)
+					if is_solved: 
+						return True
+					else: 
+						# undo wrong guess and start anew 
+						board[row_idx][col_idx] = EMPTY
+				# exhausted all candidates
+				# but none solves the problem 
+				return False 
+	# no empty spot
+	return True
+
+
+# helper fucntions fill up 

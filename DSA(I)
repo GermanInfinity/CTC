@@ -1,0 +1,199 @@
+TREES
+Non-linear hierarchical data structure with nodes connected by edges
+Allow quicker and easier access to data as it is non-linear
+
+height: longest path from root to leaf
+Applications: 
+BST can help with determining if element is present or not
+Compilers use syntax tree to validate programs
+
+Traversals: in-order, pre-order, post-order
+            (l-c-r),  (c,l,r),   (l,r,c)
+
+
+Binary Tree: Node has 0 to 2 children 
+Complete binary tree: Left-to-right by at most one level 
+Full binary tree: node has 0 or 2 chidren 
+Perfect binary tree: complete + full 
+Balanced binary tree: difference between left and right subtree is <= 1
+
+Applications: 
+Easy and quick access to data, in router algorithms, implement heaps, syntaxx trees
+
+
+def isFull(tree): 
+    if tree is None: return True
+
+    if tree.right is None and tree.left is None: return True
+
+    if tree.right is not None and tree.left is not None: 
+        return (isFull(tree.left)) and (isFull(tree.right))
+
+    return False 
+
+
+# Calculate the depth
+def calculateDepth(node):
+    d = 0
+    while (node is not None):
+        d += 1
+        node = node.left
+    return d
+
+
+# Check if the tree is perfect binary tree
+# every internal node has two child nodes and all leaf nodes at same level 
+def is_perfect(root, d, level=0):
+
+    # Check if the tree is empty
+    if (root is None):
+        return True
+
+    # At leaf node, check if at depth 
+    if (root.left is None and root.right is None):
+        return (d == level + 1) # true or false if at depth 
+
+    if (root.left is None or root.right is None):
+        return False
+
+    return (is_perfect(root.left, d, level + 1) and
+            is_perfect(root.right, d, level + 1))
+
+
+
+# complete - left to right set
+# relationship with index in array and binary tree
+# in array index 2i + 1 is index i in binary tree 
+# Count the number of nodes
+def count_nodes(root):
+    if root is None:
+        return 0
+    return (1 + count_nodes(root.left) + count_nodes(root.right))
+
+
+# Check if the tree is complete binary tree
+def is_complete(root, index, numberNodes):
+
+    # Check if the tree is empty
+    if root is None:
+        return True
+
+    if index >= numberNodes:
+        return False
+
+    return (is_complete(root.left, 2 * index + 1, numberNodes)
+            and is_complete(root.right, 2 * index + 2, numberNodes))
+
+
+# Height balanced 
+def isHeightBalanced(root, height):
+
+    left_height = Height()
+    right_height = Height()
+
+    if root is None:
+        return True
+
+    l = isHeightBalanced(root.left, left_height)
+    r = isHeightBalanced(root.right, right_height)
+
+    height.height = max(left_height.height, right_height.height) + 1
+
+    if abs(left_height.height - right_height.height) 
+
+
+
+Binary Search Trees
+A data structure that allows us to quickly maintain a sorted list of numbers
+max of two children, can search for presence of number in O(log(n)) time
+- All nodes of left subtree less than root
+- All nodes of right subtree greater than root 
+- Subtrees maintain BST property
+
+Operations: 
+Search 
+If root == NULL 
+    return NULL;
+If number == root->data 
+    return root->data;
+If number < root->data 
+    return search(root->left)
+If number > root->data 
+    return search(root->right)
+
+Insert
+If node == NULL 
+    return createNode(data)
+if (data < node->data)
+    node->left  = insert(node->left, data);
+else if (data > node->data)
+    node->right = insert(node->right, data);  
+return node;
+
+Delete - three cases
+(i) delete left node: simply delete from tree
+(ii) delete node with right child: replace node with right child, delete right child
+(iii) node has two children: get in-order successor(leftmost right element), replace
+node with successor, remove in-order successor 
+
+# Insert a node
+def insert(node, key):
+
+    # Return a new node if the tree is empty
+    if node is None:
+        return Node(key)
+
+    # Traverse to the right place and insert the node
+    if key < node.key:
+        node.left = insert(node.left, key)
+    else:
+        node.right = insert(node.right, key)
+
+    return node
+
+
+# Find the inorder successor
+def minValueNode(node):
+    current = node
+
+    # Find the leftmost leaf
+    while(current.left is not None):
+        current = current.left
+
+    return current
+
+
+# Deleting a node
+def deleteNode(root, key):
+
+    # Return if the tree is empty
+    if root is None:
+        return root
+
+    # Find the node to be deleted
+    if key < root.key:
+        root.left = deleteNode(root.left, key)
+    elif(key > root.key):
+        root.right = deleteNode(root.right, key)
+    else:
+        # If the node is with only one child or no child
+        if root.left is None:
+            temp = root.right
+            root = None
+            return temp
+
+        elif root.right is None:
+            temp = root.left
+            root = None
+            return temp
+
+        # If the node has two children,
+        # place the inorder successor in position of the node to be deleted
+        temp = minValueNode(root.right)
+
+        root.key = temp.key
+
+        # Delete the inorder successor
+        root.right = deleteNode(root.right, temp.key)
+
+    return root

@@ -1,0 +1,38 @@
+# ALGOEXPERT - STRINGS
+Sets have guaranteed logarithmic access time: implemented with binary search tree
+https://wiki.python.org/moin/TimeComplexity
+
+# Palindrome check: use two pointers, start end and compare. 
+# while start < end; check. return True or False
+
+# Caesar cipher encryptor
+# use all alphabets, store indexes in dictionary for quick look up
+# use modulo to increase by k, return based on alphabet new position 
+
+
+# Generate document
+# check if giving document can be generated with character list 
+# use two collection dictionaries, and checked their frequencies. 
+# dictionary worst case O(n) if there is a collision; O(1)- due to hashing
+
+# First non-repeating character
+# Use a dictionary to find first occurence of value 1 in string. 
+# to create dictionary on the fly 
+# dict = {} 
+# for char in string: 
+# dict[char] = dict.get(char, 0) + 1
+
+# Count inversions!
+
+# Longest palindromic substring
+
+# Valiate IP
+# Creating possible combinations of placing three periods in a string
+# max position to place 1st, 2nd and 3rd period
+
+
+# Group Anagram
+# create dictionary, loop through each word and sort. 
+# for every word, if sorted word in dictionary, append word. else create new dictionary
+of word
+# return list(dictionary.values())

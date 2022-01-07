@@ -1,0 +1,190 @@
+# ARRAYS & STRINGS EASY ALGORITHMS 
+
+# Remove duplicates from sorted array in-place
+# Use a two pointer technique 
+
+# string encoding: return a3b4c2
+# use two pointers
+# while p1 < len
+# if p1 + p2 >= len(s): finish, res.append(s[p1] + str(p2)), break
+# check if s[p1 + p2] == s[p1]: p2 + 1
+# else: res.append(s[p1] + str(p2)); move p1, p1 = p1 + p2; p2 = 1
+
+
+# Binary search - implement both recursively and iteratively 
+# Never splice array, create function to take start, end, target and array
+# if low > high return -1 
+# mid = (low + high) // 2; paranthesis so important
+# if target > mid; call on mid + 1 to high
+# else; call on low to mid - 1 
+
+
+# Search in rotated array
+# find exclusive conditions and run binary search 
+
+# Check the next value
+# if next value == current + 1:  move both pointers fine
+# else: move second pointer until different element
+# once found different, assign first pointer to different element
+
+# do this until second pointer finishes traversing the array 
+
+
+# Best time to buy and sell stock  1 and 2 ??? Do not fully understand
+# finding gretaest consecutive difference
+# difference exists when element ahead is bigger than previous element
+# when this occurs, increase total difference or price. 
+
+
+# Rotate array to right by k steps 
+# return array[len(array)-k:] + array[:len(array)-k]
+# no splice solution, use pop and insert
+
+
+# Contains duplicate
+# use set difference or a dictionary
+# if len(set) != len(input): false
+
+
+# Single number 
+# Every element appears twice except one, find it. with O(1) space
+# sort and look ahead, O(nlogn)
+# exclusive or'ing all elements, acts as a switch between present and non present
+# elements 
+
+
+# intersection of two arrays II
+# return intersection in any order 
+# sort. use two pointers, move smaller pointer, append matching array list
+# use set intersection
+# use dictionary; new list function extend, to extend a number of elements by regular
+list
+
+
+# plus one
+# can solve recursively or iteratively use a carry variable
+# keep track of overflow
+
+
+# move zeroes
+# use two pointers
+# ptr1 assigns array, ptr2 checks value and skips unwanted values 
+
+
+# two sum 
+# when returning indexes, we should not sort. 
+# sort is for returnign the values and is applicable to 3sum
+# in 2sum we can simply use the dictionary technique. 
+
+# three sum
+# sort the array 
+# hold an element, left is next and right is len - 1
+# while loop through left and right finding actual sum 
+# when found, use small while loop to avoid duplicates of left and rights
+# increment low and high
+# in other conditions, increment low or high accordingly. 
+
+
+# URLify
+# use two pointers, start one at true end and input end 
+# if true end pointer not a space, add actual character and decrement both values
+# if true end a space, use for loop to reassign string to have %20
+# decrement p1 all the time decrement p2 only once
+
+
+
+# Palindrome permutation 
+# check if string can be rearranged to get palindrome
+# use dictionary to check if every element occurs at even times
+# cross check with size of string
+# assign new val in dcitionary; a[i] = a.get(i, 0) + 1
+
+# isUnique - check if characters appear once 
+# can use a set to store, if any new addition already in, false
+# no additional space; sort string and iterate to check 
+
+# Check permutation - check if stringa is permutation of stringb
+# can sort and compare O(nlogn)
+# can also use dictionaries and compare
+
+# SetZeroes - set zeroes on row and column of a zero appearance.
+# can use sets to store row and col info of where 0 is 
+# iterate through and set to 0 
+# with no extra spac 
+# learn optimized soln
+
+
+# Reverse words in a string
+# trim edges of spaces
+# put words in list with split function 
+# loop backward for each word, skip spaces
+# append val to a result variable, watch out for end. 
+
+
+# 2sum
+# Need to know if they need values or indices, 
+# if it's values you can sort, and use two pointers
+# if it's indices, you cannot sort but can use dictionary
+# use dictionary to store indices of every element
+# check if target - nums[i] in dictionary, and not same index
+# return 
+
+# Word search 
+# we have to use dfs on the cell that has the first starting character
+# we also use an index to keep track of position we check 
+# have to do a backtracking thing, set the row,col to '*' after recursive calls reset
+back to temp
+
+# First missing positive
+# in O(nlogn)
+# first sort, slice list to be from 1 to :
+# in for loop, if index at 0 not 1, return 1 
+# else, check by one ahead of difference. return accordingly. 
+
+# in O(n) time and O(n) space
+# place everything in set, check if in set from 1 to len +1 
+# return i or return len+1
+
+# Spiral matrix 
+# create variables: rows, cols, topRow, bottomRow, rightCol, leftCol
+# walk round matrix updating variables and closing spiral 
+# keep idx tracker for idx % 4
+# idx % 4=0 top, idx % 4=1 right, idx % 4=2 bottom, idx % 4=3 left
+# topRow +1,     rightCol -1,     bottomRow +1,     leftCol +1
+# for i to cols, for i to rows, for i to reversed cols, for i to reversed rows
+# if i within
+# leftCol and rightCol, topRow and bottomRow, leftCol and rightCol, topRow and bottomRow
+# ans.append(matrix[][])
+# increment appopriate pointer: topRow+, rightCol-, bottomRow-, leftCol+
+# at end
+# if leftCol > rightCol or topRow > bottomRow: finish
+# idx += 1
+
+
+# Remove duplicates from string
+# Use sets, if element in set don't add to resulting string
+# in-place solution: sort string, convert string to list
+# perform swaps, keep track of two pointers, one for unique another for whole
+
+
+# Remove adjacent duplicates in string 
+# use a stack 
+# stacks are good when you need to do things adjacent wise 
+
+# Find smallest positive number in array 
+# solution I have is nlogn
+# sort, start from 1 index
+# if not 1 return 1, else check forward and current and return waht is missing
+
+# Validate IP Address
+# first use two functions to check for ip4 and ip6 
+# can serparate by count of : and . 
+# ip4 cases: len(element) is 0 False, first element is 0 and length is greater than
+1 False. within range. try, except ValueError. 
+# ip6 cases: alpha and nums list, len(element) is 0 or > 4 False, leading zeros in
+0th position, 0th position bigger than 4, length of query not 8
+# check 0 position, change to lower case, if in alpha and num
+# check other positions, change to lower, use double for loop
+ 
+
+### NEED TO KNOW PERMUTATION AND COMBINATION 

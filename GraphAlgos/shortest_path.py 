@@ -1,0 +1,54 @@
+# find shortest path between nodes 
+
+graph = {'w':['x','v'],'x':['w','y'],'y':['x','z'],'z':['y','v'],'v':['z','w']}
+
+def shortest_path(graph, src, dst): 
+    queue = [[src, 0]]
+    visited = set([src])
+    while queue: 
+        current = queue[0]
+        queue = queue[1:]
+
+        if current[0] == dst: return current[1]
+
+        for node in graph[current[0]]: 
+            if node in visited: continue
+            visited.add(node)
+            queue.append([node, current[1] + 1])
+
+    return -1
+
+def shortest_path_x(graph, src, dst): 
+    if graph is None: return None
+    # use bfs, keep track of size. 
+    # return size 
+    min_path = float('inf')
+    for node in graph[src]: 
+        path = bfs(graph, node, dst)
+        if path < min_path: 
+            min_path = path
+
+    return min_path 
+
+
+
+def bfs(graph, src, dst):
+    queue = [ src ]
+    path = 1
+
+    while queue: 
+        current = queue[0]
+        queue = queue[1:]
+        
+
+        if current: 
+
+            if current == dst: return path
+
+            for node in graph[current]: 
+                path += 1
+                queue.append(node)
+
+    return path 
+
+print (shortest_path(graph, 'w', 'v'))

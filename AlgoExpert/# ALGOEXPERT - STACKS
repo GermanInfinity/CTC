@@ -1,0 +1,35 @@
+# ALGOEXPERT - STACKS
+# Balanced brackets
+# create stack, open brackets, close brackets and pairs list
+# for every char in string, if in open bracket add to stack
+# elif in close bracket, and pairs match pop. also if len(stack) == 0 False
+# if len stack == 0 True else False
+
+
+# ALGOEXPERT LINKED LIST
+# find point of loop in linked list 
+# it must contain a list. so catch up first and second pointer
+# first = head.next, second = head.next.next
+# while not equal, first = first.next, second = second.next.next
+# reset first to head
+# move first and second normal way, till they catch up
+
+# Remove duplicates from sorted ll
+# point to head
+# while it is not none
+# whle next is not None and nex.value == curr.value: move next
+# curr.next = nex, curr = nex
+
+# reverse LL
+# two pointers
+# while curr not None: 
+# temp = curr.next
+# curr.next = prev
+# prev = curr
+# curr = temp; return prev
+
+
+# Kadanes algorithm 
+# current, best
+# current = max(array[i], current + array[i])
+# best = max(current, best)

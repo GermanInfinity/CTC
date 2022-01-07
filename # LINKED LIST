@@ -1,0 +1,16 @@
+# LINKED LIST 
+
+# Sum between two linked lists
+# ensure we have result, carry
+# can use dummy node for resulting ll
+# while p1 or p2; result is carry
+# add values for each pointer, move pointer
+# set new ll with result = result % 10 and carry = result // 10 
+# at end check for carry and add to ll
+
+
+# Detect cycle 
+# create fast and slow, fast at next
+# while fast and fast.next
+# check if match
+# else move fast to next next and slow to next

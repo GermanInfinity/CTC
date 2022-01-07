@@ -1,0 +1,54 @@
+# TREES
+# in-order successor
+# if i have right child, return leftmost right child
+# find best parent
+
+# get height of a binary tree 
+# max(left, right) + 1..return 0 if none
+
+# check if tree is balanced 
+# check node is balanced, 
+# if node is balanced, check left, check right, return true 
+# return false
+
+# Correct BST
+# Get inorder traversal of elements in tree
+# sort list
+# insert back in to the tree
+
+# connect nodes at same level 
+# use deque, put all node in list of lists
+# connect them with right pointer 
+# 116. Populating Next Right Pointers in Each Node
+
+# Validate BST
+# remember to treat each node like a subtree
+# remember to use helper function, so we can pass in max and min values
+# max is inf min is -inf
+# check node doesnt violate with max and min, return anded result of left and right
+# change max_value and min_value in left and right function calls. 
+
+# find closest value in BST
+# use helper function to allow passing of closest value 
+# use while loop to move through tree, 
+# have condition to update closest value
+# return closest value
+
+# get sum of all paths in tree and store in array
+# handle each node as subtree
+# at each node increase sum
+# when at leaf append your path list with sum
+# call on left and right
+# return path
+
+# check if binary tree is balanced 
+# 
+
+# GET PATH FROM ROOT TO LEAF
+# use dfs
+# on each node append to path
+# on leaf print path
+# at end of dfs calls (finished searching one route) pop most recent element
+# from path
+# GET ALL LEVELS OF TREE
+

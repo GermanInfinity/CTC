@@ -1,0 +1,23 @@
+GRAPH DATA STRUCTURE
+A collection of nodes with a collection of edges as ordered pairs per node
+Adjacency list: storing only edges, more space efficient, harder to work with
+                edges: [['i','j'],['k','i'],['m','k']] # Edge list
+Adjacency matrix: storing node to node relationship in lookup table 
+                graph = {0:[8,1,5], 1:[0], 5:[0,8] # Adjacency list
+
+Operations: check if element in, graph traversal, add elements to graph, find path
+
+Types of graph: undirected and directed
+undirected: graph in which edges do not point in any direction
+connected: always a path from a vertice to another 
+
+Spanning tree: sub-graph of undirected connect graph that includes all vertices with
+minimum number of edges
+Best used in finding paths and telecommunications
+               
+
+Traversals: DFS O(V+E), application: finding cycles, finding path
+            BFS O(V+E), application: finding shortest path, cycle detection in undirected
+            graph
+
+Use visited list to avoid cycles (in undirected graphs)
