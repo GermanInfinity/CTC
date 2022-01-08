@@ -1,0 +1,73 @@
+# ALGOEXPERT - TREES
+# BST Trees
+# Find closest value in bst
+# use closest as a constant as you rloop through tree
+# closest is updated if abs(target-closest) > abs(target-ptr.value)
+# updated with ptr.value
+# else loop through tree with ptr normally. lastly break with else
+# return closest
+
+# try to implement remove in bst 
+
+# validate bst 
+# use a helper function and pass in max and min value
+# in helper function is tree.value >= max_value or tree.value < min_value: return
+False
+# Call again on right and left, changing max and min value
+
+# pre order traversal: root, left, right. 
+# post order traversal: left, right, root. 
+# in-order traversal: left, root, right
+
+# minimum height BST
+# construct bst from array, minimize height 
+# use helper, takes in start and end of array. if start > end: return
+# node at mid: BST(array[mid])
+# node.left = helper(array, start, mid-1)
+# node.right = helper(array, mid+1, end)
+# return node
+
+# kth largest in tree
+# place nodes in an array, in in order fashion
+# return array[-k] node
+
+# reconstruct bst from traversal
+
+
+# height balanced
+# use getheight helper function
+# in main function check if node.left - node.rigth < 1
+# check if node.left and node.right are heigth balanced; return True
+# else return False
+
+
+# find nodes successor 
+# get to node
+# if node has no right, return rightmost parent
+# ptr = node
+# while ptr.parent and ptr.parent.right == ptr: 
+# ptr = ptr.parent
+# return ptr.parent
+# if node has right, return most left node 
+
+# branch sums- sums to leaf
+# run dfs(root, 0, [])
+# on every node. 
+# if at aleaf, append to list total sum 
+# sum += node.value
+# if at leaf: res.append(sum)
+# dfs(node.left, sum, res)
+# dfs(node.right, sum, res)
+# return res
+
+# node depth 
+# heightNode(node, depth)
+# left = heigthNode(node.left, depth+1)
+# right = heightNode(node.right, depth+1)
+return depth + leftNodes + rightNodes
+
+# invertBinaryTree
+# swapping left and right at every node
+# if tree is none return 
+# invert (left), invert(right)
+# temPl, tempr. node.left = tempR, node.right = templ
