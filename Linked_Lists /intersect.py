@@ -1,6 +1,10 @@
 """
 	intersection.py: check if two ll's intersect.
 """
+
+# Better solution, use pointers to both heads. when both pointers
+# finish traversing their own ll, they should traerse the opposite ll
+# if they ever meet, return true if not false
 def intersect(ll1, ll2): 
 	sett = set()
 	top = ll1

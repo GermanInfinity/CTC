@@ -1,4 +1,5 @@
 # best_sum: return shortest sum
+# optimization problem 
 
 # O(n * m), O(m*m)
 def best_sum(target, array, memo={}):

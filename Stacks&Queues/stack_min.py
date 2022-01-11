@@ -16,7 +16,6 @@ class stack:
 
 
         
-
     def pop(self, element): 
         self.self.stack.pop(-1)
         self.self.min_stack.pop(-1)

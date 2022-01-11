@@ -1,4 +1,5 @@
 ## canSum.py: function returns true if can find sum of target in array 
+# Decision problem
 
 def can_sum(target, array, memo={}): 
 

@@ -71,3 +71,6 @@ return depth + leftNodes + rightNodes
 # if tree is none return 
 # invert (left), invert(right)
 # temPl, tempr. node.left = tempR, node.right = templ
+
+# diameter; longest path, not necesarilly from root
+# max(lh + rh, max(ldiameter, rdiameter))

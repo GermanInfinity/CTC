@@ -13,4 +13,4 @@ def climbing_stairs(n, steps):
     return val
 
 
-print (climbing_stairs(3, [1,2,3]))
+print (climbing_stairs(3, [1,2]))

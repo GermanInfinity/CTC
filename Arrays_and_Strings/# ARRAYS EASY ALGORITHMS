@@ -1,5 +1,12 @@
 # ARRAYS & STRINGS EASY ALGORITHMS 
 
+# attempt global 
+# search in rotated array 
+# find the smallest elements index
+# if we are looking for a number between smallest and rightmost of smallest, search
+in that array
+# else search in other array
+
 # Remove duplicates from sorted array in-place
 # Use a two pointer technique 
 
@@ -9,6 +16,15 @@
 # if p1 + p2 >= len(s): finish, res.append(s[p1] + str(p2)), break
 # check if s[p1 + p2] == s[p1]: p2 + 1
 # else: res.append(s[p1] + str(p2)); move p1, p1 = p1 + p2; p2 = 1
+
+# one_away: return true if two strings are one edit away from equal 
+# use two pointers, if characters are not equal, check if made edit already
+# if made edit return false, else, set made edit to true and move appropritate pointer
+# depending on length
+
+# find duplicate in array O(1) space
+# use linked list cycle detection technique
+# find node where cycle begins ll problem, same logic
 
 
 # Binary search - implement both recursively and iteratively 

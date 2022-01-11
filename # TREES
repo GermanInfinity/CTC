@@ -41,14 +41,27 @@
 # call on left and right
 # return path
 
-# check if binary tree is balanced 
+
+# GET PATH FROM ROOT TO LEAF- path sum II
+# keep track of list 
+# it's normal add nodes till leaf, at leaf add list to big list and return
+# at end, in recursive call. pass copy of list, instead of actual leaf!
+
+#  i can get paths in a string, the normal algoexpert way, when at leaf just append
+to array
+# it can also be the total of the path as well. 
+
+
+# GET ALL LEVELS OF TREE
+# use a queue
+# initialize level list
+# set up for loop till size of queue
+# append to level, and inspect left and right children
+# append result outside of for loop 
 # 
 
-# GET PATH FROM ROOT TO LEAF
-# use dfs
-# on each node append to path
-# on leaf print path
-# at end of dfs calls (finished searching one route) pop most recent element
-# from path
-# GET ALL LEVELS OF TREE
+
+# lowwest common ancestor
+# moving only one pointer if both p and q are less or greater than 
+# if they disagree in inequality return the ptr
 

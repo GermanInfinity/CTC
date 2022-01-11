@@ -1,6 +1,6 @@
 # how_sum: retun array that adds up to target sum 
 
-
+# comibinatoric problem 
 
 def how_sum(target, array, memo={}):
     if target in memo: return memo[target]

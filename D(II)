@@ -5,10 +5,10 @@ Power comes from restructuring chains
 Complexity 
 Search: O(n) worst O(n) average
 Insert: O(1) worst O(1) average
-Delection: O(1) worst O(1) average
+Deletion: O(1) worst O(1) average
 
 
-Applications: Dynamic memory allocation, implemneted in stack and queue, 
+Applications: Dynamic memory allocation, implemeted in stack and queue, 
               hash tables, graphs, in undo functionality of softwares
 Types: singly, doubly, circular
 

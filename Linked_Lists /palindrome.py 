@@ -15,6 +15,7 @@ def is_palindrome(ll):
 	# Reverse
 	prev, curr, nex = None, None, None
 	curr = p1
+	print (curr.value)
 	while curr: 
 		nex = curr.next
 		curr.next = prev
@@ -32,5 +33,5 @@ def is_palindrome(ll):
 
 ll_true = LinkedList([1, 2, 3, 4, 5, 4, 3, 2, 1])
 print(is_palindrome(ll_true))
-ll_false = LinkedList([1, 2, 3, 4, 5, 6, 7, 8, 9])
+ll_false = LinkedList([8, 1, 2, 2, 2, 1, 8])
 print(is_palindrome(ll_false))
